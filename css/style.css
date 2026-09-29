@@ -2809,8 +2809,8 @@ h6 {
     right: 0;
     width: 4rem;
     height: 4rem;
-    border-top: 4px solid var(--brand-navy);
-    border-right: 4px solid var(--brand-navy);
+    border-top: 2px solid var(--brand-navy);
+    border-right: 2px solid var(--brand-navy);
     border-top-right-radius: 1.75rem;
     opacity: 0.6;
     transition: all var(--transition-normal);
@@ -2822,8 +2822,8 @@ h6 {
     left: 0;
     width: 4rem;
     height: 4rem;
-    border-bottom: 4px solid var(--brand-navy);
-    border-left: 4px solid var(--brand-navy);
+    border-bottom: 2px solid var(--brand-navy);
+    border-left: 2px solid var(--brand-navy);
     border-bottom-left-radius: 1.75rem;
     opacity: 0.6;
     transition: all var(--transition-normal);
