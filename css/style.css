@@ -854,7 +854,6 @@ h6 {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
   /* ==========================================================================
    EXACT REPLICA DESIGN: ABOUT GOVIND REMEDIES SECTION (CREATIVE & ANIMATED)
    ========================================================================== */
@@ -6426,4 +6425,50 @@ h6 {
 .desk-item:hover .desk-icon {
   background-color: rgba(140, 198, 63, 0.14);
   border-color: var(--brand-green-bright);
+}
+
+/* The logo is a wide lockup — scale it down so it clears the header buttons on phones */
+@media (max-width: 639px) {
+  .logo-img {
+    height: 2.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-img {
+    height: 1.9rem;
+  }
+}
+
+/* Mobile overflow guards: let grid columns shrink below their content width,
+   and keep decorative blobs/arcs from creating a horizontal scrollbar */
+.about-intro-grid > *,
+.contact-main-grid > *,
+.trust-grid > * {
+  min-width: 0;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 400px) {
+  .stats-grid {
+    gap: 1rem;
+  }
+
+  .stats-grid > * {
+    min-width: 0;
+  }
+
+  .stat-item {
+    gap: 0.6rem;
+  }
+
+  .stat-icon-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
 }
