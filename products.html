@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products Portfolio | Govind Remedies Pvt. Ltd.</title>
-  <meta name="description"
-    content="Explore our complete catalog of pharmaceutical formulations, pre-filled syringes (PFS), low molecular weight heparins, and specialty sterile injectables.">
+  <title>Product Portfolio | Govind Remedies Pvt. Ltd.</title>
+  <meta name="description" content="Browse Govind Remedies' sterile injectable finished dosage formulations in prefilled syringes, plus empty glass and COC/COP syringes, cartridges and contrast-media syringes.">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
 </head>
-
 <body>
 
   <!-- Header -->
@@ -20,13 +18,15 @@
         <img src="assets/images/GOVIND LOGO.svg" alt="GOVIND REMEDIES PVT. LTD." class="logo-img">
       </a>
 
+      <!-- Desktop Nav -->
       <nav class="nav-links">
         <a href="index.html" class="nav-item">Home</a>
-       
+     
         <a href="products.html" class="nav-item active">Products</a>
-         <a href="about.html" class="nav-item">About Us</a>
+           <a href="about.html" class="nav-item">About Us</a>
       </nav>
 
+      <!-- Actions -->
       <div class="nav-actions">
         <a href="contact.html" class="btn btn-primary">Contact Us</a>
 
@@ -50,8 +50,6 @@
   </header>
 
   <main>
-
-    <!-- 1. CREATIVE COMPACT PAGE BANNER / BREADCRUMB -->
     <section class="page-banner">
       <div class="page-banner-bg-shape"></div>
       <div class="banner-grid-overlay"></div>
@@ -105,8 +103,9 @@
 
          
           <h1 class="page-banner-title">
-            Complete <span class="text-gradient">Product Formulations</span>
+            Sterile Injectable <span class="text-gradient">Product Portfolio</span>
           </h1>
+          
 
           <div class="breadcrumb-nav">
             <a href="index.html">Home</a>
@@ -118,2174 +117,97 @@
       </div>
     </section>
 
-    <!-- 2. CATALOG SHOWCASE & PRODUCT LISTING -->
-    <section class="section" style="padding-top: 80px; padding-bottom: 80px;">
+    <section class="catalog-section">
       <div class="container container-wide">
 
-        <!-- Pure CSS Filter Form / Radio Inputs -->
-        <input type="radio" name="cat" id="cat-all" class="cat-radio-input" checked>
-        <input type="radio" name="cat" id="cat-anticoagulant" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-vitamins-minerals" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-electrolytes-infusions" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-emergency-cardiac" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-analgesic-nsaid" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-contrast-media" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-specialty-peptides" class="cat-radio-input">
-        <input type="radio" name="cat" id="cat-anesthetic-others" class="cat-radio-input">
+        <div class="catalog-modes" role="tablist">
+          <button type="button" class="catalog-mode-btn active" role="tab" data-mode="formulations">Finished Dosage Formulations <span class="gr-count">76</span></button>
+          <button type="button" class="catalog-mode-btn" role="tab" data-mode="empty-syringes">Empty Syringes &amp; Cartridges <span class="gr-count">16</span></button>
+        </div>
 
-        <!-- Filter Bar with Category Chips and Search -->
-        <div class="filter-bar">
-          <div style="display: flex; flex-direction: column; gap: 1.75rem; align-items: center;">
+        <!-- Formulations -->
+        <div class="catalog-panel" id="panel-formulations">
+          <div class="catalog-layout">
+            <aside class="catalog-sidebar">
+              <div class="catalog-search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="search" id="catSearch" placeholder="Search name, strength, category…" autocomplete="off" aria-label="Search products">
+              </div>
+              <div class="catalog-side-title">Therapeutic group</div>
+              <ul class="cat-list" id="catList">
+              <li><button type="button" class="active" data-cat="all">All formulations <span class="n" data-n="all">76</span></button></li>
+              <li><button type="button" data-cat="anticoagulants">Anticoagulants <span class="n" data-n="anticoagulants">15</span></button></li>
+              <li><button type="button" data-cat="vitamins">Vitamins <span class="n" data-n="vitamins">7</span></button></li>
+              <li><button type="button" data-cat="nutrient-replenishers">Nutrient Replenishers <span class="n" data-n="nutrient-replenishers">6</span></button></li>
+              <li><button type="button" data-cat="anticancer">Anticancer <span class="n" data-n="anticancer">1</span></button></li>
+              <li><button type="button" data-cat="weight-antidiabetic">Weight Management &amp; Antidiabetic <span class="n" data-n="weight-antidiabetic">5</span></button></li>
+              <li><button type="button" data-cat="pain-management">Pain Management <span class="n" data-n="pain-management">12</span></button></li>
+              <li><button type="button" data-cat="critical-care">Critical Care <span class="n" data-n="critical-care">19</span></button></li>
+              <li><button type="button" data-cat="others">Others <span class="n" data-n="others">11</span></button></li>
+              </ul>
+              <div class="catalog-side-title">Market</div>
+              <div class="market-toggle" id="marketToggle">
+                <button type="button" class="active" data-market="all">All</button>
+                <button type="button" data-market="Export">Export</button>
+                <button type="button" data-market="Domestic/Export">Domestic</button>
+              </div>
+              <button type="button" class="catalog-reset" id="catReset">Reset filters</button>
+            </aside>
 
-            <!-- Centered Search box -->
-            <div style="position: relative; max-width: 580px; width: 100%; margin: 0 auto;">
-              <input type="text" id="productSearchInput"
-                placeholder="Search formulations by name, category, or molecule..."
-                style="width: 100%; padding: 0.8rem 1.25rem 0.8rem 2.75rem; border-radius: 9999px; border: 1.5px solid var(--border-color); font-size: 0.95rem; font-family: var(--font-body); background: #ffffff; outline: none; box-shadow: 0 4px 16px rgba(0,0,0,0.03); transition: all 0.2s ease;"
-                onfocus="this.style.borderColor='var(--brand-blue)'; this.style.boxShadow='0 6px 20px rgba(1, 45, 133, 0.15)'"
-                onblur="this.style.borderColor='var(--border-color)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.03)'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round"
-                style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+            <div>
+              <div class="catalog-toolbar">
+                <div class="catalog-count">Showing <strong id="catCount">0</strong> <span id="catCountLabel">products</span></div>
+                <div class="view-toggle" id="viewToggle">
+                  <button type="button" class="active" data-view="cards">Cards</button>
+                  <button type="button" data-view="table">Product list</button>
+                </div>
+              </div>
+              <div id="catResults"></div>
             </div>
-
-            <!-- Centered Category Chips -->
-            <div class="category-chips">
-              <label for="cat-all" class="chip-btn lbl-all">All Formulations</label>
-              <label for="cat-anticoagulant" class="chip-btn lbl-anticoagulant">Anticoagulants</label>
-              <label for="cat-vitamins-minerals" class="chip-btn lbl-vitamins-minerals">Vitamins &amp; Minerals</label>
-              <label for="cat-electrolytes-infusions" class="chip-btn lbl-electrolytes-infusions">Electrolytes &amp;
-                Infusions</label>
-              <label for="cat-emergency-cardiac" class="chip-btn lbl-emergency-cardiac">Emergency &amp; Cardiac</label>
-              <label for="cat-analgesic-nsaid" class="chip-btn lbl-analgesic-nsaid">Analgesics &amp; NSAIDs</label>
-              <label for="cat-contrast-media" class="chip-btn lbl-contrast-media">Contrast Media</label>
-              <label for="cat-specialty-peptides" class="chip-btn lbl-specialty-peptides">Specialty &amp;
-                Peptides</label>
-              <label for="cat-anesthetic-others" class="chip-btn lbl-anesthetic-others">Anesthetics &amp; Others</label>
-            </div>
-
           </div>
         </div>
 
-        <!-- Count & Status -->
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;"
-          class="reveal-init">
-          <div style="font-size: 0.95rem; font-weight: 700; color: #64748B;">
-            Showing <strong id="productCount" style="color: #0A1F4D;">37</strong> Total Pharmaceutical Formulations
+        <!-- Empty syringes -->
+        <div class="catalog-panel" id="panel-empty-syringes" hidden>
+          <div class="empty-syr-intro">
+            <div class="gr-eyebrow">Empty Syringes</div>
+            <h2 class="section-title">Bonded Needle. <span class="text-gradient">Non-Detachable Cannula.</span></h2>
+            <p class="section-subtitle">Precision | Purity | Performance &mdash; empty syringes and cartridges in glass and COC / COP, manufactured under ISO and GMP certification.</p>
           </div>
+          <div class="syringe-banner"><img src="assets/images/brochure/syringe-lab-hero.jpg" alt="Empty glass and polymer syringes"></div>
+          <div class="syringe-range-grid">
+          <div class="syringe-type-card">
+            <h3 class="syringe-type-name">Glass <span class="syringe-type-count">6 sizes</span></h3>
+            <ul class="syringe-items"><li>0.5 ml SN</li><li>1 ml SN</li><li>1 ml LT</li><li>2.25 ml LT</li><li>5 ml LT</li><li>10 ml LT</li></ul>
+          </div>
+          <div class="syringe-type-card">
+            <h3 class="syringe-type-name">COC / COP <span class="syringe-type-count">6 sizes</span></h3>
+            <ul class="syringe-items"><li>1 ml SN</li><li>1 ml LT</li><li>2.25 ml LT</li><li>5 ml LT</li><li>10 ml LT</li><li>50 ml LT</li></ul>
+          </div>
+          <div class="syringe-type-card">
+            <h3 class="syringe-type-name">Cartridge <span class="syringe-type-count">2 sizes</span></h3>
+            <ul class="syringe-items"><li>3 ml Glass</li><li>3 ml COC</li></ul>
+          </div>
+          <div class="syringe-type-card">
+            <h3 class="syringe-type-name">Contrast Media <span class="syringe-type-count">2 sizes</span></h3>
+            <ul class="syringe-items"><li>150 ml PC</li><li>150 ml COC</li></ul>
+          </div>
+          </div>
+          <div class="syringe-legend"><span><strong>SN</strong> &ndash; Staked (fixed) needle</span><span><strong>LT</strong> &ndash; Luer tip</span><span><strong>COC / COP</strong> &ndash; Cyclic olefin copolymer / polymer</span><span><strong>PC</strong> &ndash; Polycarbonate</span></div>
+          <div class="syringe-legend" style="display:grid;gap:.5rem;"><strong>Product portfolio</strong><span>&bull; Empty glass and COC / COP RTU prefilled syringes: 0.5 mL to 50 mL</span><span>&bull; Glass and COC RTU pen cartridges</span><span>&bull; PC and COC disposable syringe kits for contrast media</span><span>&bull; Customized medical device solutions</span><strong style="margin-top:.5rem">Quality &amp; regulatory commitment</strong><span>Supported by a medical device manufacturing licence from CDSCO and ISO 13485 certification.</span></div>
+          <div style="text-align:center;margin-top:2rem;"><a href="contact.html" class="btn btn-primary"><span>Request syringe specifications</span></a></div>
         </div>
 
-        <!-- Product Cards Grid -->
-        <div class="products-grid" id="productsCatalogGrid">
-
-          <a href="products/enoxaparin.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Enoxaparin</h3>
-              <p class="product-card-desc">Low molecular weight heparin formulation manufactured in pre-filled syringe
-                (PFS) delivery systems.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="20 mg/ml, 40 mg/ml, 60 mg/ml, 80 mg/ml, 100 mg/ml">20 mg/ml, 40
-                    mg/ml, 60 mg/ml, 80 mg/ml, 100 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-b1.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin B1 (Thiamine)</h3>
-              <p class="product-card-desc">High-purity Thiamine formulation in sterile glass PFS for specialized
-                parenteral administration.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="100 mg/ml">100 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-b-complex.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin B1 + B6 + B12 + Nicotinamide</h3>
-              <p class="product-card-desc">Multi-B vitamin complex combination in sterile pre-filled syringe format.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="Mix Formulation">Mix Formulation</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-b12-methylcobalamin.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin B12 (Methylcobalamin)</h3>
-              <p class="product-card-desc">Methylcobalamin injectable solution in precision pre-filled glass syringe.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="1500 mcg/ml">1500 mcg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-b12-combination.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin B12 + Nicotinamide + Folic Acid</h3>
-              <p class="product-card-desc">Balanced vitamin B12, nicotinamide, and folic acid injectable formulation.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="Mix Formulation">Mix Formulation</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-d3.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin D3 (Cholecalciferol)</h3>
-              <p class="product-card-desc">High-potency Vitamin D3 aqueous injectable formulation in pre-filled glass
-                syringe.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="600,000 IU">600,000 IU</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/vitamin-k1.html" class="product-card cat-vitamins-minerals">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Vitamins & Minerals</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Vitamin K1 (Phytomenadione)</h3>
-              <p class="product-card-desc">Phytomenadione sterile solution packaged in protective glass PFS packaging.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="10 mg/ml">10 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/dextrose.html" class="product-card cat-electrolytes-infusions">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Electrolytes & Infusions</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Dextrose</h3>
-              <p class="product-card-desc">Hypertonic Dextrose 50% solution in Cyclic Olefin Copolymer (COC) polymer
-                container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">50 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="50 %">50 %</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/sodium-bicarbonate.html" class="product-card cat-electrolytes-infusions">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Electrolytes & Infusions</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Sodium Bicarbonate</h3>
-              <p class="product-card-desc">Concentrated Sodium Bicarbonate solution in advanced polymer COC container.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">50 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="8.40%">8.40%</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/sodium-chloride.html" class="product-card cat-electrolytes-infusions">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Electrolytes & Infusions</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Sodium Chloride</h3>
-              <p class="product-card-desc">Isotonic 0.9% Sodium Chloride solution in sterile COC polymer container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">50 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.9%">0.9%</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/adrenaline.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Adrenaline (Epinephrine)</h3>
-              <p class="product-card-desc">Sterile Adrenaline injectable solution available in pre-filled syringes and
-                polymer containers.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN, 5 ml LT, 10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.1 mg/mL, 1 mg/mL">0.1 mg/mL, 1 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass / COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/heparin.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Heparin</h3>
-              <p class="product-card-desc">Unfractionated Heparin sodium injectable solution in precision glass
-                packaging.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="5,000 IU, 25,000 IU">5,000 IU, 25,000 IU</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/nadroparin.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Nadroparin</h3>
-              <p class="product-card-desc">Comprehensive range of Nadroparin low molecular weight heparin in glass PFS.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val"
-                    title="2850 IU / 0.3ml, 3800 IU / 0.4ml, 5700 IU / 0.6ml, 7600 IU / 0.8ml, 9500 IU / 1ml">2850 IU /
-                    0.3ml, 3800 IU / 0.4ml, 5700 IU / 0.6ml, 7600 IU / 0.8ml, 9500 IU / 1ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/tinzaparin.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Tinzaparin</h3>
-              <p class="product-card-desc">Tinzaparin sodium low molecular weight heparin formulation in pre-filled
-                syringe.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="3,500 - 4,500 IU">3,500 - 4,500 IU</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/sodium-hyaluronate.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Sodium Hyaluronate</h3>
-              <p class="product-card-desc">Viscoelastic Sodium Hyaluronate solutions filled in Cyclic Olefin Copolymer
-                containers.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">2.25 ml LT, 5 ml LT, 10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="2 ml filled, 3 ml filled, 6 ml filled">2 ml filled, 3 ml filled, 6 ml
-                    filled</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/dalteparin.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Dalteparin</h3>
-              <p class="product-card-desc">Dalteparin sodium low molecular weight heparin in graduated pre-filled glass
-                syringe.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="2500 IU/0.2ml, 5000 IU/0.3ml">2500 IU/0.2ml, 5000 IU/0.3ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/aceclofenac-sodium.html" class="product-card cat-analgesic-nsaid">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Analgesic & NSAID</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Aceclofenac Sodium</h3>
-              <p class="product-card-desc">Sterile Aceclofenac Sodium analgesic formulation in single-dose glass PFS.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="150 mg/ml">150 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/adenosine.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Adenosine</h3>
-              <p class="product-card-desc">Adenosine antiarrhythmic solution manufactured for immediate parenteral
-                administration.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">2.25 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="3 mg/ml">3 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/alprostadil.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Alprostadil</h3>
-              <p class="product-card-desc">Prostaglandin E1 (Alprostadil) sterile formulation in glass PFS container.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.5 mg/mL">0.5 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/amikacin.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Amikacin</h3>
-              <p class="product-card-desc">Amikacin aminoglycoside formulation packaged in high-grade glass container.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">2.25 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="250 mg/mL">250 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/atropine-sulphate.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Atropine Sulphate</h3>
-              <p class="product-card-desc">Atropine Sulphate anticholinergic solution in PFS and polymer LT containers.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN, 5 ml LT, 10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.1 mg/ml">0.1 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass / COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/caffeine.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Caffeine Citrate</h3>
-              <p class="product-card-desc">Caffeine solution manufactured in precision glass container system.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">2.25 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="20 mg/ml">20 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/calcium-chloride.html" class="product-card cat-electrolytes-infusions">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Electrolytes & Infusions</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Calcium Chloride</h3>
-              <p class="product-card-desc">Calcium Chloride 10% electrolyte solution in polymer COC container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="10%">10%</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/citroralix.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Cetrorelix (Citroralix)</h3>
-              <p class="product-card-desc">Peptide analogue Cetrorelix formulation in sterile single-dose glass PFS.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.25 mg">0.25 mg</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/diclofenac-sodium.html" class="product-card cat-analgesic-nsaid">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Analgesic & NSAID</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Diclofenac Sodium</h3>
-              <p class="product-card-desc">Diclofenac Sodium parenteral formulation in pre-filled glass syringe.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="75 mg/ml">75 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/dopamine.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Dopamine</h3>
-              <p class="product-card-desc">Dopamine hydrochloride inotropic solution in glass container packaging.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="200 mg/mL">200 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/fondaparinux.html" class="product-card cat-anticoagulant">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anticoagulant</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Fondaparinux</h3>
-              <p class="product-card-desc">Synthetic pentasaccharide Fondaparinux sodium formulation in glass PFS.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="5 mg/mL">5 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/fulvestrant.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Fulvestrant</h3>
-              <p class="product-card-desc">Specialty Fulvestrant oil-based solution packaged in glass container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="250 mg/5 ml">250 mg/5 ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/gadoterate-meglumine.html" class="product-card cat-contrast-media">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Contrast Media</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Gadoterate Meglumine</h3>
-              <p class="product-card-desc">Macrocyclic contrast media solution in 20 ml, 50 ml, and 100 ml polymer COC
-                containers.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">20 ml LT, 50 ml LT, 100 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="300-370 mg iodine/ mL">300-370 mg iodine/ mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/iron-sucrose.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Iron Sucrose</h3>
-              <p class="product-card-desc">Sterile Iron Sucrose complex solution for intravenous iron administration.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="20 mg/mL">20 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/lidocaine.html" class="product-card cat-anesthetic-others">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Anesthetic & Others</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Lidocaine</h3>
-              <p class="product-card-desc">Lidocaine 2% anesthetic solution packaged in PP/COC polymer container
-                systems.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT, 10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="2%">2%</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">PP/COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/methylene-blue.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Methylthioninium Chloride (Methylene Blue)</h3>
-              <p class="product-card-desc">Methylthioninium chloride 10 mg/ml solution in PP/COC container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">10 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="10 mg/ml">10 mg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">PP/COC</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/naloxone.html" class="product-card cat-emergency-cardiac">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Emergency & Cardiac</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Naloxone</h3>
-              <p class="product-card-desc">Naloxone hydrochloride antagonist solution in single-dose pre-filled glass
-                syringe.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.4 mg/mL">0.4 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/octreotide.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Octreotide</h3>
-              <p class="product-card-desc">Octreotide synthetic somatostatin peptide formulation in precision glass PFS.
-              </p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">1 ml SN</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="50 mcg/mL, 100 mcg/ml">50 mcg/mL, 100 mcg/ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/semaglutide.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Semaglutide</h3>
-              <p class="product-card-desc">GLP-1 receptor agonist Semaglutide formulation in specialized 3 ml pen glass
-                cartridge system.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">3 ml Pen</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="0.25 - 1 mg">0.25 - 1 mg</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/thiocolchicoside.html" class="product-card cat-analgesic-nsaid">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Analgesic & NSAID</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Thiocolchicoside</h3>
-              <p class="product-card-desc">Thiocolchicoside muscle relaxant formulation in 2.25 ml glass container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">2.25 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="4 mg/2 ml">4 mg/2 ml</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-
-          <a href="products/tranexamic-acid.html" class="product-card cat-specialty-peptides">
-            <div class="product-orb-glow"></div>
-            <div>
-              <div class="product-header-row">
-                <div class="product-cat-tag">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#549C36" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                  </svg>
-                  <span>Specialty & Peptides</span>
-                </div>
-                <div class="product-arrow-btn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <h3 class="product-card-title">Tranexamic Acid</h3>
-              <p class="product-card-desc">Tranexamic Acid antifibrinolytic solution packaged in high-clarity glass
-                container.</p>
-            </div>
-
-            <div>
-              <div class="product-delivery-box">
-                <div class="delivery-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m18 2 4 4" />
-                    <path d="m17 7 3-3" />
-                    <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
-                    <path d="m9 11 4 4" />
-                    <path d="m5 19-3 3" />
-                    <path d="m14 4 6 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div class="delivery-text-top">Delivery</div>
-                  <div class="delivery-text-val">5 ml LT</div>
-                </div>
-              </div>
-
-              <div class="product-specs-row">
-                <div>
-                  <div class="spec-col-label">Strength</div>
-                  <div class="spec-col-val" title="100 mg/mL">100 mg/mL</div>
-                </div>
-                <div style="text-align: right;">
-                  <div class="spec-col-label">Material</div>
-                  <div class="spec-col-val emerald">Glass</div>
-                </div>
-              </div>
-            </div>
-          </a>
-
-        </div>
       </div>
     </section>
 
+    <section class="assurance-section">
+      <div class="container">
+        <div class="assurance-grid">
+          <div class="assurance-item"><div class="assurance-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div><h3>Premium Quality</h3><p>Consistent, inspected components</p></div> <div class="assurance-item"><div class="assurance-icon"><img src="assets/images/brochure/iso-logo.png" alt="ISO"></div><h3>ISO &amp; GMP Certified</h3><p>ISO certified company · GMP certificate</p></div> <div class="assurance-item"><div class="assurance-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3>Precise Accuracy</h3><p>Controlled dimensions and dosing</p></div> <div class="assurance-item"><div class="assurance-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Trusted Worldwide</h3><p>Domestic and export supply</p></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -2299,9 +221,34 @@
             <img src="assets/images/GOVIND LOGO.svg" alt="GOVIND REMEDIES PVT. LTD." class="footer-logo-img">
           </a>
           <p class="footer-desc">
-            Advancing Healthcare Through Precision Manufacturing. Dedicated supplier of reliable pharmaceutical
-            solutions in Pre-Filled Syringes (PFS) and specialty liquid formulations globally.
+            Advance sterile drug delivery. Finished dosage formulations and prefilled syringe technology, with a complete range of empty glass and COC/COP syringes. ISO &amp; GMP certified.
           </p>
+          <div class="footer-social-row">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div>
@@ -2316,15 +263,14 @@
         <div>
           <h4 class="footer-heading">Formulation Spectrum</h4>
           <ul class="footer-nav-list">
-            <li><a href="products.html">Low Molecular Weight Heparins</a></li>
-            <li><a href="products.html">Pre-Filled Syringes (PFS)</a></li>
-            <li><a href="products.html">Parenteral Vitamins &amp; Minerals</a></li>
-            <li><a href="products.html">Emergency Cardiovascular Formulations</a></li>
+            <li><a href="products.html?cat=anticoagulants">Anticoagulants</a></li>
+            <li><a href="products.html?cat=pain-management">Pain Management</a></li>
+            <li><a href="products.html?cat=critical-care">Critical Care</a></li>
+            <li><a href="products.html#empty-syringes">Empty Syringes &amp; Cartridges</a></li>
           </ul>
         </div>
       </div>
 
-      <!-- Footer Contact Desk with Outline Icons -->
       <div class="footer-contact-desk">
         <div class="desk-item">
           <div class="desk-icon">
@@ -2338,7 +284,7 @@
           <div>
             <div style="font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.25rem;">Direct
               Contact Desk</div>
-            <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">+91 (0) 123 456 7890
+            <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">+91 79 4603 3735
             </div>
           </div>
         </div>
@@ -2368,79 +314,142 @@
           </div>
           <div>
             <div style="font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 0.25rem;">
-              Headquarters</div>
-            <div style="font-size: 0.95rem; font-weight: 600;">Pharmaceutical Campus, India</div>
+              Factory &amp; Reg. Office</div>
+            <div style="font-size: 0.95rem; font-weight: 600;">Survey No. 359, N.H. 8, Opp. Kerala G.I.D.C, Ta-Bavla, Ahmedabad, Gujarat - 382220</div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom-row">
-        <div>&copy; 2026, <strong style="color: #8CC63F;">GOVIND REMEDIES</strong>, ALL RIGHTS RESERVED</div>
+        <div>
+          &copy; 2026, <strong style="color: #8CC63F;">GOVIND REMEDIES</strong>, ALL RIGHTS RESERVED
+        </div>
         <div style="display: flex; align-items: center; gap: 1.5rem;">
           <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#top" class="scroll-top-btn" aria-label="Scroll to top"><svg width="18" height="18"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <a href="#">Terms & Conditions</a>
+          <a href="#top" class="scroll-top-btn" aria-label="Scroll to top">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="18 15 12 9 6 15"></polyline>
-            </svg></a>
+            </svg>
+          </a>
         </div>
       </div>
+
     </div>
   </footer>
 
-  <!-- Interactive Search & Filter Script + Scroll Reveal Observer -->
+  <script src="assets/js/products-data.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.reveal-init, .reveal-left, .reveal-right, .reveal-scale').forEach(function (el) { el.classList.add('is-revealed'); }); });
+  </script>
   <script>
     (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        // Scroll reveal
-        const revealElements = document.querySelectorAll('.reveal-init, .reveal-scale');
-        if (revealElements.length && 'IntersectionObserver' in window) {
-          const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-                obs.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-          revealElements.forEach(el => observer.observe(el));
-        } else {
-          revealElements.forEach(el => el.classList.add('is-revealed'));
+      var DATA = window.GOVIND_DATA;
+      var ACCENT = {"anticoagulants":"#012D85","vitamins":"#549C36","nutrient-replenishers":"#0E7490","anticancer":"#6D28D9","weight-antidiabetic":"#B45309","pain-management":"#BE123C","critical-care":"#0A1F4D","others":"#475569"};
+      var cats = {};
+      DATA.CATEGORIES.forEach(function (c) { cats[c.id] = c; });
+      var IMGS = ['syringes-lab', 'syringes-row', 'hand-syringe', 'syringe-lab-hero', 'syringes-white'];
+      var state = { cat: 'all', q: '', market: 'all', view: 'cards' };
+      var $ = function (id) { return document.getElementById(id); };
+      var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+      var uniq = function (a) { return a.filter(function (v, i) { return a.indexOf(v) === i; }); };
+      var ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>';
+
+      function matches(p, row) {
+        if (state.cat !== 'all' && p.cat !== state.cat) return false;
+        if (state.market !== 'all') {
+          if (state.market === 'Export' ? row[3] !== 'Export' : row[3] !== 'Domestic/Export') return false;
         }
+        if (state.q) {
+          var hay = (p.name + ' ' + p.desc + ' ' + cats[p.cat].name + ' ' + row[1] + ' ' + row[2]).toLowerCase();
+          if (hay.indexOf(state.q) === -1) return false;
+        }
+        return true;
+      }
 
-        // Live Product Search
-        const searchInput = document.getElementById('productSearchInput');
-        const countDisplay = document.getElementById('productCount');
-        const cards = document.querySelectorAll('.product-card');
+      function filtered() {
+        var out = [];
+        DATA.PRODUCTS.forEach(function (p) {
+          var rows = p.rows.filter(function (r) { return matches(p, r); });
+          if (rows.length) out.push({ p: p, rows: rows });
+        });
+        return out;
+      }
 
-        if (searchInput && cards.length) {
-          searchInput.addEventListener('input', function () {
-            const query = this.value.toLowerCase().trim();
-            let visibleCount = 0;
+      function cardHtml(g) {
+        var p = g.p, sizes = uniq(g.rows.map(function (r) { return r[2]; }));
+        return '<a href="products/' + p.slug + '.html" class="pcard" style="--accent:' + ACCENT[p.cat] + '">' +
+          '<div class="pcard-img"><img src="assets/images/brochure/' + IMGS[DATA.PRODUCTS.indexOf(p) % IMGS.length] + '.jpg" alt="" loading="lazy"></div>' +
+          '<div class="pcard-top"><span class="pcard-cat">' + esc(cats[p.cat].short) + '</span><span class="pcard-arrow">' + ARROW + '</span></div>' +
+          '<h3>' + esc(p.name) + '</h3><p>' + esc(p.desc) + '</p>' +
+          '<div class="pcard-meta">' +
+          '<div class="pcard-meta-row"><span>PFS size</span><span class="pcard-sizes">' + sizes.map(function (s) { return '<span class="gr-chip">' + esc(s) + '</span>'; }).join('') + '</span></div>' +
+          '<div class="pcard-meta-row"><span>Strength</span><span>' + (g.rows.length > 1 ? g.rows.length + ' strengths' : esc(g.rows[0][1])) + '</span></div>' +
+          '</div></a>';
+      }
 
-            cards.forEach(card => {
-              const title = card.querySelector('.product-card-title')?.textContent.toLowerCase() || '';
-              const desc = card.querySelector('.product-card-desc')?.textContent.toLowerCase() || '';
-              const cat = card.querySelector('.product-cat-tag span')?.textContent.toLowerCase() || '';
-              const specs = card.querySelector('.spec-col-val')?.textContent.toLowerCase() || '';
-
-              if (!query || title.includes(query) || desc.includes(query) || cat.includes(query) || specs.includes(query)) {
-                card.style.display = '';
-                visibleCount++;
-              } else {
-                card.style.display = 'none';
-              }
-            });
-
-            if (countDisplay) {
-              countDisplay.textContent = visibleCount;
-            }
+      function tableHtml(groups) {
+        var html = '<div class="catalog-table-wrap"><table class="catalog-table"><thead><tr><th>Sr.</th><th>Product</th><th>Strength</th><th>PFS size</th><th>Market / Material</th></tr></thead><tbody>';
+        var last = null;
+        groups.forEach(function (g) {
+          if (g.p.cat !== last) { last = g.p.cat; html += '<tr class="group-row"><td colspan="5">' + esc(cats[last].name) + '</td></tr>'; }
+          g.rows.forEach(function (r) {
+            var tag = r[3] ? '<span class="gr-chip is-green">' + esc(r[3].replace('/', ' / ')) + '</span>' : (r[4] ? '<span class="gr-chip is-outline">' + esc(r[4]) + '</span>' : '—');
+            html += '<tr><td class="sr">' + r[0] + '</td><td><a href="products/' + g.p.slug + '.html">' + esc(g.p.name) + '</a></td><td>' + esc(r[1]) + '</td><td><span class="gr-chip">' + esc(r[2]) + '</span></td><td>' + tag + '</td></tr>';
           });
-        }
+        });
+        return html + '</tbody></table></div>';
+      }
+
+      function render() {
+        var groups = filtered();
+        var rowCount = groups.reduce(function (a, g) { return a + g.rows.length; }, 0);
+        $('catCount').textContent = state.view === 'table' ? rowCount : groups.length;
+        $('catCountLabel').textContent = state.view === 'table' ? 'presentations' : (groups.length === 1 ? 'product' : 'products');
+        if (!groups.length) { $('catResults').innerHTML = '<div class="catalog-empty">No products match your filters.</div>'; return; }
+        $('catResults').innerHTML = state.view === 'table' ? tableHtml(groups) : '<div class="pcard-grid">' + groups.map(cardHtml).join('') + '</div>';
+      }
+
+      function setActive(container, attr, val) {
+        Array.prototype.forEach.call(container.querySelectorAll('button'), function (b) { b.classList.toggle('active', b.getAttribute(attr) === val); });
+      }
+
+      function setMode(mode) {
+        Array.prototype.forEach.call(document.querySelectorAll('.catalog-mode-btn'), function (b) { b.classList.toggle('active', b.getAttribute('data-mode') === mode); });
+        $('panel-formulations').hidden = mode !== 'formulations';
+        $('panel-empty-syringes').hidden = mode !== 'empty-syringes';
+      }
+
+      $('catSearch').addEventListener('input', function () { state.q = this.value.trim().toLowerCase(); render(); });
+      $('catList').addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        state.cat = b.getAttribute('data-cat'); setActive($('catList'), 'data-cat', state.cat); render();
       });
+      $('marketToggle').addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        state.market = b.getAttribute('data-market'); setActive($('marketToggle'), 'data-market', state.market); render();
+      });
+      $('viewToggle').addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        state.view = b.getAttribute('data-view'); setActive($('viewToggle'), 'data-view', state.view); render();
+      });
+      $('catReset').addEventListener('click', function () {
+        state = { cat: 'all', q: '', market: 'all', view: state.view };
+        $('catSearch').value = ''; setActive($('catList'), 'data-cat', 'all'); setActive($('marketToggle'), 'data-market', 'all'); render();
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('.catalog-mode-btn'), function (b) {
+        b.addEventListener('click', function () {
+          var m = b.getAttribute('data-mode'); setMode(m);
+          history.replaceState(null, '', m === 'empty-syringes' ? '#empty-syringes' : location.pathname + location.search);
+        });
+      });
+
+      var params = new URLSearchParams(location.search);
+      if (params.get('cat') && cats[params.get('cat')]) { state.cat = params.get('cat'); setActive($('catList'), 'data-cat', state.cat); }
+      if (location.hash === '#empty-syringes') setMode('empty-syringes');
+      render();
     })();
+
   </script>
-
 </body>
-
 </html>
