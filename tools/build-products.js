@@ -186,6 +186,7 @@ function detailPage(p) {
   <!-- Footer -->
   ${footer}
 
+  <script src="../assets/js/reveal.js"></script>
 </body>
 </html>
 `;
@@ -300,11 +301,9 @@ function listingPage() {
 
   <script src="assets/js/products-data.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () { document.querySelectorAll('.reveal-init, .reveal-left, .reveal-right, .reveal-scale').forEach(function (el) { el.classList.add('is-revealed'); }); });
-  </script>
-  <script>
 ${fs.readFileSync(__dirname + '/catalog-page.js', 'utf8').replace('__ACCENT__', JSON.stringify(ACCENT))}
   </script>
+  <script src="assets/js/reveal.js"></script>
 </body>
 </html>
 `;

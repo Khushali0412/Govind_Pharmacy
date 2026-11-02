@@ -986,35 +986,6 @@
     })();
   </script>
 
-  <!-- Scroll-Triggered Reveal Animations Script (High Performance Intersection Observer) -->
-  <script>
-    (function () {
-      document.addEventListener('DOMContentLoaded', function () {
-        const revealElements = document.querySelectorAll('.reveal-init, .reveal-left, .reveal-right, .reveal-scale');
-        
-        if (!revealElements.length) return;
-
-        if ('IntersectionObserver' in window) {
-          const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-                obs.unobserve(entry.target);
-              }
-            });
-          }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-          });
-
-          revealElements.forEach(el => observer.observe(el));
-        } else {
-          // Graceful fallback if observer is unsupported
-          revealElements.forEach(el => el.classList.add('is-revealed'));
-        }
-      });
-    })();
-  </script>
-
+  <script src="assets/js/reveal.js"></script>
 </body>
 </html>
