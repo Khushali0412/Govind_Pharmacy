@@ -12,7 +12,7 @@ const ACCENT = {
 };
 
 const IMG = ['syringes-lab', 'syringes-row', 'hand-syringe', 'syringe-lab-hero', 'syringes-white'];
-const imgFor = (p, prefix) => `${prefix}assets/images/brochure/${IMG[D.PRODUCTS.indexOf(p) % IMG.length]}.jpg`;
+const imgFor = (p, prefix) => `${prefix}assets/images/brochure/${IMG[D.PRODUCTS.indexOf(p) % IMG.length]}.webp`;
 const PORTFOLIO = `<div class="syringe-legend" style="display:grid;gap:.5rem;"><strong>Product portfolio</strong><span>&bull; Empty glass and COC / COP RTU prefilled syringes: 0.5 mL to 50 mL</span><span>&bull; Glass and COC RTU pen cartridges</span><span>&bull; PC and COC disposable syringe kits for contrast media</span><span>&bull; Customized medical device solutions</span><strong style="margin-top:.5rem">Quality &amp; regulatory commitment</strong><span>Supported by a medical device manufacturing licence from CDSCO and ISO 13485 certification.</span></div>`;
 const index = fs.readFileSync('index.html', 'utf8');
 const oldProducts = fs.existsSync('products.html') ? fs.readFileSync('products.html', 'utf8') : '';
@@ -276,7 +276,7 @@ function listingPage() {
             <h2 class="section-title">Bonded Needle. <span class="text-gradient">Non-Detachable Cannula.</span></h2>
             <p class="section-subtitle">Precision | Purity | Performance &mdash; empty syringes and cartridges in glass and COC / COP, manufactured under ISO and GMP certification.</p>
           </div>
-          <div class="syringe-banner"><img src="assets/images/brochure/syringe-lab-hero.jpg" alt="Empty glass and polymer syringes"></div>
+          <div class="syringe-banner"><img src="assets/images/brochure/syringe-lab-hero.webp" alt="Empty glass and polymer syringes"></div>
           <div class="syringe-range-grid">${syr}
           </div>
           <div class="syringe-legend"><span><strong>SN</strong> &ndash; Staked (fixed) needle</span><span><strong>LT</strong> &ndash; Luer tip</span><span><strong>COC / COP</strong> &ndash; Cyclic olefin copolymer / polymer</span><span><strong>PC</strong> &ndash; Polycarbonate</span></div>
@@ -290,7 +290,7 @@ function listingPage() {
     <section class="assurance-section">
       <div class="container">
         <div class="assurance-grid">
-          ${[['gem', 'Premium Quality', 'Consistent, inspected components'], ['iso', 'ISO & GMP Certified', 'ISO certified company · GMP certificate'], ['target', 'Precise Accuracy', 'Controlled dimensions and dosing'], ['globe', 'Trusted Worldwide', 'Domestic and export supply']].map(i => `<div class="assurance-item"><div class="assurance-icon">${i[0] === 'iso' ? '<img src="assets/images/brochure/iso-logo.png" alt="ISO">' : svg(i[0], 30)}</div><h3>${esc(i[1])}</h3><p>${esc(i[2])}</p></div>`).join(' ')}
+          ${[['gem', 'Premium Quality', 'Consistent, inspected components'], ['iso', 'ISO & GMP Certified', 'ISO certified company · GMP certificate'], ['target', 'Precise Accuracy', 'Controlled dimensions and dosing'], ['globe', 'Trusted Worldwide', 'Domestic and export supply']].map(i => `<div class="assurance-item"><div class="assurance-icon">${i[0] === 'iso' ? '<img src="assets/images/brochure/iso-logo.webp" alt="ISO">' : svg(i[0], 30)}</div><h3>${esc(i[1])}</h3><p>${esc(i[2])}</p></div>`).join(' ')}
         </div>
       </div>
     </section>

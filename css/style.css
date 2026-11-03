@@ -590,7 +590,7 @@ h6 {
 .page-banner-bg-shape {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/banner-one-shape-bg.jpg');
+  background-image: url('../assets/images/banner-one-shape-bg.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.08;

@@ -34,7 +34,7 @@
       function cardHtml(g) {
         var p = g.p, sizes = uniq(g.rows.map(function (r) { return r[2]; }));
         return '<a href="products/' + p.slug + '.html" class="pcard" style="--accent:' + ACCENT[p.cat] + '">' +
-          '<div class="pcard-img"><img src="assets/images/brochure/' + IMGS[DATA.PRODUCTS.indexOf(p) % IMGS.length] + '.jpg" alt="" loading="lazy"></div>' +
+          '<div class="pcard-img"><img src="assets/images/brochure/' + IMGS[DATA.PRODUCTS.indexOf(p) % IMGS.length] + '.webp" alt="" loading="lazy"></div>' +
           '<div class="pcard-top"><span class="pcard-cat">' + esc(cats[p.cat].short) + '</span><span class="pcard-arrow">' + ARROW + '</span></div>' +
           '<h3>' + esc(p.name) + '</h3><p>' + esc(p.desc) + '</p>' +
           '<div class="pcard-meta">' +
