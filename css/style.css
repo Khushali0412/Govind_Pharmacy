@@ -507,8 +507,11 @@ h6 {
     display: flex;
   }
 
-  /* stop the page behind the open menu from scrolling */
-  body:has(.mobile-toggle-input:checked) {
+  /* stop the page behind the open menu from scrolling. Lock on html, not body:
+     with html set to overflow-x: clip, body's overflow isn't passed to the
+     viewport, so overflow: hidden on body turns body into its own scroll box
+     and the sticky header jumps back to the top of the page. */
+  html:has(.mobile-toggle-input:checked) {
     overflow: hidden;
   }
 
@@ -2747,7 +2750,7 @@ h6 {
 
   .vial-container {
     position: relative;
-    width: 260px;
+  
     animation: floatVial 6s ease-in-out infinite;
   }
 

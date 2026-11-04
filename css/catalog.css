@@ -148,7 +148,7 @@
 .pcard-arrow { width: 2.1rem; height: 2.1rem; border-radius: 50%; display: grid; place-items: center; background: var(--brand-soft-bg); color: var(--text-main); transition: all .25s ease; flex: 0 0 auto; }
 .pcard:hover .pcard-arrow { background: var(--accent, var(--brand-blue)); color: #fff; transform: rotate(45deg); }
 .pcard h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 900; line-height: 1.25; margin: 0; color: var(--text-main); }
-.pcard p { margin: 0; color: var(--text-muted); font-size: .9rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.pcard p { margin: 0; color: var(--text-muted); font-size: .9rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;  }
 .pcard-meta { margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--border-color); display: grid; gap: .6rem; }
 .pcard-meta-row { display: flex; justify-content: space-between; align-items: baseline; gap: .75rem; font-size: .8rem; }
 .pcard-meta-row > span:first-child { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .68rem; color: var(--text-light); }
@@ -239,7 +239,7 @@
 
 /* ---------- Responsive -------------------------------------------------- */
 @media (max-width: 1100px) {
-  .syringe-range-grid, .assurance-grid { grid-template-columns: repeat(2, 1fr); }
+  .syringe-range-grid, .assurance-grid { grid-template-columns: repeat(2, 1fr)  !important; }
   .pd-main { grid-template-columns: 1fr; }
   .pd-side { position: static; }
   .pd-summary { grid-template-columns: repeat(2, 1fr); }
@@ -251,7 +251,8 @@
   .pd-hero { grid-template-columns: 1fr; padding: 2.25rem 1.5rem; gap: 2rem; }
 }
 @media (max-width: 600px) {
-  .syringe-range-grid, .assurance-grid { grid-template-columns: 1fr; }
+    
+  .syringe-range-grid, .assurance-grid { grid-template-columns: 1fr !important; }
   .facility-card { padding: 1.75rem; }
   .facility-card::after { font-size: 5rem; }
   .pd-summary { grid-template-columns: 1fr 1fr; }
@@ -275,7 +276,16 @@
 .syringe-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,31,77,.55), transparent 60%); }
 .assurance-item img.iso { height: 54px; width: auto; border-radius: .5rem; margin-bottom: .9rem; background: #fff; padding: 2px; }
 @media (max-width: 600px) { .facility-img { margin: -1.75rem -1.75rem 0; height: 180px; } }
-
+@media (max-width: 767px){
+  .pfs-container { width: 100% !important}
+  .syringe-range-grid, .assurance-grid { grid-template-columns: 1fr !important; }
+  .facility-img {
+height: 100%;
+  }
+  .pcard-img{
+   height: 100%; 
+  }
+}
 /* ---------- Assurance strip v2 ---------- */
 .assurance-section { position: relative; overflow: hidden; padding: 4rem 0; }
 .assurance-section::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 15% 0%, rgba(140,198,63,.18), transparent 45%), radial-gradient(circle at 90% 100%, rgba(143,180,255,.15), transparent 45%); pointer-events: none; }
@@ -304,7 +314,7 @@
   .pd-page { padding-top: 1.25rem; }
   .pd-related { margin-top: 2.25rem; padding-bottom: 3rem; }
   .pd-hero { padding: 1.75rem 1.25rem; }
-  .syringe-banner { height: 200px; }
+  .syringe-banner { height: 100% }
 }
 /* product summary cells: 2 columns must fit a 320px phone */
 @media (max-width: 400px) {
